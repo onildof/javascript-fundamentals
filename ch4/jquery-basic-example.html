@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic jQuery Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/* In jQuery almost everything starts with a $ followed by something in parenthesis */
+		$(document).ready(function() { //Means whenever the document is loaded, do stuff.
+			$("a").hover(function(event) {
+				alert("Event fired on hover. Thanks, Obama!");
+			});
+			$("a").click(function(event) {
+				alert("Event fired on click. Thanks, Obama!");
+			});
+		});	
+	</script>
+</head>
+<body>
+	<a href="http://www.packtpub.com">Don't Click</a>
+</body>
+</html>
+/*
+jQuery is a javascript library. It features:
+- DOM CSS style element selection/manipulation
+- Events
+- Effects and animations
+- Ajax
+- Asynchronous
+- JSON parsing
+- Utilities
+- Cross-browser compatibility (if something doesn't work on that browser, it tries the next best thing, and so on…)
+
+If you wanna load it locally, use npm install jquery. 
+
+Otherwise, you use a CDN (Content Delivery Network), which is a website that basically holds the scripts for you, such as Google Hosted Libraries or code.jquery.com. Just copy the provided script tag and paste it on your HTML file.
+
+Advantages of local: you can work without a connection and you can look through the source code.
+Advantages of CDN: less server bandwidth use and is faster (because of cache somehow)
+*/
