@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic jQuery Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("a").hover(function(event) {
+				alert("Event fired on hover. Thanks, Obama!");
+			});
+			$("a").click(function(event) {
+				alert("Event fired on click. Thanks, Obama!");
+			});
+		});	
+	</script>
+</head>
+<body>
+	<a href="http://www.packtpub.com">Don't Click</a>
+</body>
+</html>
