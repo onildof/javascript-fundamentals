@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>jQuery Inserting Elements and Content</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			//Inserting HTML .before()
+			$(".container").before("<p>I'm before your shiny container div</p>");
+			//Inserting HTML .after()
+			$(".container").after("<p>I'm after your shiny container div</p>");
+			//Inserting HTML .prepend()
+			$("#mylist").prepend("<li>I'm number one now</li>");
+
+			//Inserting HTML .append()
+			$("#mylist").append("<li>I'm last place now</li>");
+			
+			//Inserting Text content .prepend()
+			$("li.even").prepend("Even Number: ");
+
+			//Inserting Text content .append()
+			$("li.odd").append(" :Odd Number");
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul id="mylist">
+			<li class="odd">one</li>
+			<li class="even">two</li>
+			<li class="odd">three</li>
+			<li class="even">four</li>
+			<li class="odd">five</li>
+		</ul>
+	</div>
+</body>
+</html>

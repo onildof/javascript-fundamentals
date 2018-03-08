@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/* jQuery uses a CSS-style selector.
+		Syntax is $("OPTION"), where OPTION is either:
+		- an element:	$("li")
+		- an id: 	$("container")	
+		- a class:	$(".odd")
+
+		Use .html() to get the HTML of the selected item or .text() to get its text.
+		*/
+		$(document).ready(function() {
+			var unorderedList = $("ul").html();
+			console.log("jQuery element selection: " + unorderedList);
+		
+			var myListID = $("#mylist").html();
+			console.log("jQuery ID selection: " + myListID);
+
+			var oddListItems = $(".odd").text();
+			console.log("text of jQuery class selection: " + oddListItems);
+		});
+	</script>
+<body>
+	<div id="container">
+		<ul id="mylist">
+			<li class="odd">1</li>
+			<li class="even">2</li>
+			<li class="odd">3</li>
+			<li class="even">4</li>
+			<li class="odd">5</li>
+		</ul>
+	</div>
+</body>
+</html>
+	

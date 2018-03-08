@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic jQuery Selector Update Examples</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		.changeUp {
+			font-weight: bold;
+			font-size: large;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<ul id="mylist">
+			<li class="odd">One</li>
+			<li class="even">Two</li>
+			<li class="odd">Three</li>
+			<li class="even">Four</li>
+			<li class="odd">Five</li>
+		</ul>
+	</div>
+	<div id="itsblank">
+	
+	</div>
+	<script>
+	//ID HTML Changing
+	$("#itsblank").html("<ol><li>New Ordered List!</li></ol>");
+
+	//Class Text Changing
+	$(".odd").text("I've been changed!");
+
+	//Add Class
+	$(".even").addClass('changeUp');
+	</script>
+</body>
+</html>
