@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM Selection</title>
+</head>
+<body>
+	<div class="content">
+		<ul id="mylist">
+			<li class="odd">One</li>
+			<li class="even">Two</li>
+			<li class="odd">Three</li>
+			<li class="even">Four</li>
+			<li class="odd">Five</li>
+		</ul>
+	</div>
+</body>
+<script>
+	//getElementById
+	//result should be 1
+	var element1 = document.getElementById('myList')
+	console.log('getElementById')
+
+	//querySelector
+	//result should be 2
+	var element2 = document.querySelector('li.odd')
+	console.log('querySelector')
+
+	//getElementsByClassName
+	//Result should be 3
+	var elements1 = document.getElementsByClassName('odd')
+	for (var counter = 0; counter < elements1.length; counter++)
+	{
+		console.log('getElementsByClassName')
+	}
+
+	//getElementsByTagName
+	var elements2 = document.getElementsByTagName('li');
+	for (var counter = 0; counter < elements2.length; counter++)
+	{
+		console.log('getElementsByTagName')
+	}
+</script>
+</html>
