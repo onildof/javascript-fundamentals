@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Basic jQuery Form Example</title>
+	<meta charset="UTF-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<style>
+		#myForm {
+			width:500px;
+		}
+		#myForm label {
+			width:250px;
+		}
+		#myForm label.error,
+		#myForm input.submit {
+			margin-left:253px;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			$("#myForm").validate();
+		});
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<p>
+			<label for="name">Full Name (Minimum 10 characters)</label><br/>
+			<input id="name" name="name" minlength="10" type="text" required/>
+		</p>
+		<p>
+			<label for="email">E-Mail</label><br/>
+			<input id="email" type="email" required/>
+		</p>
+	</form>
+</body>
+</html>

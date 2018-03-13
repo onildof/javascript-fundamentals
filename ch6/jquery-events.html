@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>jQuery Events</title>
+	<!-- carrega o script do jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		body {
+			background-color:brown;
+		}
+	
+		p {
+			background-color:red;
+		}
+	</style>
+	<script>
+	/*
+	How to use jQuery Events:
+	.on('eventtype', function(//code))
+	.eventttype(//code) //a shorthand of the above
+
+	The available Events include:
+	.click
+	.dblclick
+	.mouseup
+	.hover
+	.blur
+	.submit //for when a form is submitted
+	.load //for when a document is loaded (?)
+	.resize //for when the window is resized
+
+	Event properties include:
+	type (click, hover, etc)
+	which (the button or key that was pressed)
+	target (DOM element that initiated the event)
+	pageX (mouse position from the left edge of the viewport)
+	pageY (mouse position from the top of the viewport)
+	*/
+
+		$(document).ready(function() {
+			$('body').css({
+				margin: "0px"
+			});
+			$('p').css({
+				margin: "0px"
+			});
+		});
+
+	//Não consegui fazer funcionar o evento abaixo:	
+		$("input").on(
+			"change",
+			{ foo: "bar" }, //Associate data with event binding
+			function(eventObject) {
+				console.log("An input value has changed! "+ event.data.foo);
+			}
+		);	
+	</script>
+</head>
+<body>
+	<div id="content">
+		<p>Text</p>
+	</div>
+	<div>
+		<form method="get" action="jquery-events.html">
+			<input type="text"/>
+			<input type="submit" value="submit"/>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic jQuery CSS Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<style>
+		.divBG {
+			background-color: black;
+		}
+
+		.divLink {
+			color: red;
+		}
+	</style>
+	<script>
+	/*
+		jQuery allows for various effects:
+		.show()
+		.hide()
+		.toggle()
+		.fadeIn()
+		.fadeOut()
+		.slideUp()
+		.slideDown()
+
+		And effects can be chained:
+		$('#mydiv').fadeOut().delay(1000).show();
+	*/
+	$(document).ready(function() {
+		$('#hidden').hide();
+		$('#content').fadeOut().delay(1000).fadeIn();	
+
+		//CSS Changes
+		$('#changeLink').click(function() {
+			$('.divBG').css({
+				'background-color':'red'
+			});
+			$('.divLink').css({
+				'color':'#000'
+			});
+		})
+
+		//Effects
+		$('#changeLink').on('click', (function() {
+			$('#content').fadeOut();
+			$('#hidden').fadeIn();
+		}))
+		$('#changeLinkShow').on('click', (function() {
+			$('#content').fadeIn();
+			$('#hidden').fadeOut();
+		}))
+			
+	});	
+	</script>
+</head>
+<body>
+	<div id="content" class="divBG">
+		<a id="changeLink" class="divLink" href="#content">Click Me!!</a>
+	</div>
+	<div id="hidden">
+		<a id="changeLinkShow" class="divLink" href="#hidden">Click Me Now</a>
+	</div>
+</body>
+</html>
